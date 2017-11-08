@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 对象</title>
+</head>
+
+<body>
+    <script>
+        //对象定义
+        var person = {
+            firstName: "john",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue",
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        //访问对象属性
+        document.write(person.firstName + " " + person["lastName"] + "现在" + person.age + "岁了！");
+
+        //对象方法
+        document.write(person.fullName());
+    </script>
+</body>
+
+</html>

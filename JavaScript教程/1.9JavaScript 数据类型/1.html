@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 数据类型</title>
+</head>
+
+
+<body>
+    <script>
+        //JavaScript 拥有动态类型
+        var x;
+        var x = 5;
+        var x = "John";
+        console.log(typeof(x))
+
+
+
+        //JavaScript 字符串
+        var carName1 = "Volvo XC60";
+        var carName2 = 'Volvo XC60';
+
+        var answer1 = "It's alright";
+        var answer2 = "He is called 'Johnny'"
+        var answer3 = 'He is called "Johnny"'
+
+        document.write(carName1 + "<br>")
+        document.write(carName2 + "<br>")
+        document.write(answer1 + "<br>")
+        document.write(answer2 + "<br>")
+        document.write(answer3 + "<br>")
+
+
+        //JavaScript 数字
+        var x1 = 34.00; //使用小数点
+        var x2 = 34; //不使用小数点
+
+        var y = 123e5;
+        var z = 123e-5;
+
+        document.write(x1 + "<br>")
+        document.write(x2 + "<br>")
+        document.write(y + "<br>")
+        document.write(z + "<br>")
+
+
+        //JavaScript 布尔
+        var yes = true;
+        var no = false;
+
+        document.write(yes + "<br>")
+        document.write(no + "<br>")
+
+
+        //JavaScript 数组
+        var cars = new Array();
+        cars[0] = "saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+
+        for (i = 0; i < cars.length; i++) {
+            document.write(cars[i] + "<br>")
+        }
+
+
+
+
+        //JavaScript 对象
+        var person = {
+            firstname: "John",
+            lastName: "Doe",
+            id: 5566
+        };
+
+        document.write(person.firstname + " ")
+        document.write(person["lastName"] + "<br>")
+
+
+        //Undefined 和 Null
+        var book = null;
+        console.log(typeof(book))
+
+    </script>
+</body>
+
+</html>

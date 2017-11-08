@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>JavaScript 函数</title>
+    <script>
+        //无参函数
+        function function1() {
+            alert("Hello World!");
+        }
+
+        //带参函数
+        function function2(name, job) {
+            alert("Welcome " + name + ",the " + job);
+        }
+
+        //带有返回值的函数
+        function function3(a, b) {
+            return a * b;
+        }
+
+        function function4() {
+            document.getElementById("demo").innerHTML = function3(3, 4);
+        }
+    </script>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button type="button" onclick="function1()">无参函数</button>
+    <button type="button" onclick="function2('Harry Potter','Wizard')">带参函数</button>
+    <button type="button" onclick="function4()">带有返回值函数</button>
+
+</body>
+</html>

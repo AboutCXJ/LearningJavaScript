@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 字符串</title>
+
+</head>
+
+<body>
+    <p id="demo1"></p>
+
+    <script>
+        //转义字符
+        var x = 'It\'s alright';
+        var y = "He is called \" Johnny\" ";
+        document.getElementById("demo1").innerHTML = x + "<br>" + y;
+
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        //字符串长度
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo2").innerHTML = "txt 的长度是：" + txt.length;
+
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        //字符串可以是对象
+        //不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用
+        var x = "John";
+        var y = new String("John");
+        document.getElementById("demo3").innerHTML = "x的类型：" + typeof(x) + "<br>" + "y的类型：" +
+            typeof(y) + "<br>" + "x == y? " + (x === y);
+
+    </script>
+
+
+    <script>
+        //字符串属性和方法
+        var a = "Hello ";
+        var b = "World";
+        var string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        console.log("string的长度：" + string.length);
+        console.log("string的constructor：" + string.constructor);
+        console.log("string的prototype：" + string.prototype);
+        console.log("string的3位是：" + string.charAt(3));
+        console.log("string的3位的Unicode是：" + string.charCodeAt(3));
+        console.log("a + b = " + a.concat(b));
+        console.log("Hello World 的'o'第一次出现位置：" + a.concat(b).indexOf("o"))
+        console.log("Hello World 的'o'最后一次出现位置：" + a.concat(b).lastIndexOf("o"))
+
+    </script>
+
+</body>
+
+</html>
