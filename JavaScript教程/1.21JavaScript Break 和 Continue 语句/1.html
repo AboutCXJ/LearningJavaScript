@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Break 和 Continue 语句</title>
+</head>
+
+<body>
+
+    <script>
+        for (var i = 0; i < 10; i++) {
+            if (i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+
+        for (var i = 0; i < 10; i++) {
+            if (i == 3) {
+                continue;
+            }
+            console.log(i);
+        }
+
+
+        var cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+        list: {
+            console.log(cars[0]);
+            console.log(cars[1]);
+            console.log(cars[2]);
+            break list;
+            console.log(cars[3]);
+        }
+
+    </script>
+
+</body>
+
+</html>

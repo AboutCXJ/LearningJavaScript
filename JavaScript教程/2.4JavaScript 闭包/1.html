@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 闭包</title>
+</head>
+-->
+
+<body>
+    <p id="demo">0</p>
+    <button onclick="func1()">点击</button>
+    <script>
+        function func1() {
+            document.getElementById("demo").innerHTML = add();
+        }
+
+        var add = (function() {
+            var count = 0;
+            return function() {
+                return count += 1;
+            };
+        })();
+
+
+
+
+
+        //数组去重，输出新数组。
+        var arr = [1, 22, 3, 2, 3, 4, 5, 5, 6, 1, 9, 3, 25, 4];
+        var newArr = new Array();
+
+        for (var i = 0; i < arr.length; i++) {
+            if (newArr.indexOf(arr[i]) == -1) {
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+
+
+        var i, args = [];
+        for (i = 1; i <= 100; i++) {
+            args.push(i);
+        }
+
+
+        function sum(...rest) {
+            var sum = 0;
+            console.log(arguments.length);
+            for (var num of rest) {
+                sum += num;
+            }
+            return sum;
+        }
+
+        var i, args = [];
+        for (i = 1; i <= 100; i++) {
+            args.push(i);
+        }
+        //        if (sum() !== 0) {
+        //            alert('测试失败: sum() = ' + sum());
+        //        } else if (sum(1) !== 1) {
+        //            alert('测试失败: sum(1) = ' + sum(1));
+        //        } else if (sum(2, 3) !== 5) {
+        //            alert('测试失败: sum(2, 3) = ' + sum(2, 3));
+        //        } else if (sum.apply(null, args) !== 5050) {
+        //            alert('测试失败: sum(1, 2, 3, ..., 100) = ' + sum.apply(null, args));
+        //        } else {
+        //            alert('测试通过!');
+        //        }
+
+
+        console.log(sum.apply(null, args));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 函数调用</title>
+</head>
+
+<body>
+    <script>
+        //作为一个函数调用
+        function func1(a, b) {
+            return a * b;
+        }
+
+        console.log(func1(5, 6));
+        console.log(window.func1(5, 5));
+
+
+
+        //全局对象
+        function func2() {
+            return this;
+        }
+        console.log(func2());
+
+
+        //函数作为方法调用
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+                //                return this.firstName + " " + this.lastName;
+                return this;
+            }
+        }
+        console.log(person.fullName());
+
+
+
+
+        //使用构造函数调用函数
+        function func3(arg1, arg2) {
+            this.firstName = arg1;
+            this.lastName = arg2;
+        }
+
+        var x = new func3("John", "Doe");
+        console.log(x.firstName);
+
+
+        //作为函数方法调用函数
+        var myObj1;
+
+        function func4(a, b) {
+            return a * b;
+        }
+        myObj1 = func4.call(myObj1, 10, 2);
+        console.log(myObj1);
+
+        var myObj2, myArray;
+        myArray = [10, 2];
+        myObj2 = func4.apply(myObj2, myArray);
+        console.log(myObj2);
+
+    </script>
+</body>
+
+</html>

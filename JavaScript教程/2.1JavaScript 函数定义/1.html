@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 函数定义</title>
+</head>
+
+<body>
+    <script>
+        //函数声明
+        function func1(a, b) {
+            return a * b;
+        }
+
+        console.log(func1(5, 4));
+
+
+
+        //函数表达式
+        var func2 = function(a, b) {
+            return a * b
+        };
+
+        console.log(func2);
+        console.log(func2(3, 8));
+
+
+        //Function() 构造函数
+        var func3 = new Function("a", "b", "return a * b");
+        console.log(func3(2, 5));
+
+        var func4 = function(a, b) {
+            return a * b
+        }
+        console.log(func4(2, 6));
+
+
+
+        //函数提升（Hoisting）
+        console.log(func5(5));
+
+        function func5(a) {
+            return a * a;
+        }
+
+
+        //自调用函数
+        (function() {
+            console.log("自调用")
+        })();
+
+
+        //函数可作为一个值使用
+        function func6(a, b) {
+            return a * b;
+        }
+
+        var x1 = func6(4, 3);
+        console.log(x2);
+
+
+        //函数可作为表达式使用
+        var x2 = func6(5, 6) * 2;
+        console.log(x2);
+
+
+        //函数是对象
+        function func7(a, b) {
+            console.log(arguments.length);
+        }
+
+        func7(5, 6, 7);
+
+        console.log(func7.toString());
+
+    </script>
+</body>
+
+</html>

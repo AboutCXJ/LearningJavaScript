@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript typeof, null, 和 undefined</title>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        document.getElementById("demo1").innerHTML =
+            typeof("John") + "<br>" +
+            typeof(3.14) + "<br>" +
+            typeof(false) + "<br>" +
+            typeof([1, 2, 3, 4]) + "<br>" +
+            typeof({
+                name: "john",
+                age: 34
+            })
+
+
+        var person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        var person1 = null;
+        document.getElementById("demo2").innerHTML = typeof person1 + " " + person1;
+
+
+        var person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        var person2 = undefined;
+        document.getElementById("demo3").innerHTML = typeof person2 + " " + person2;
+
+
+        document.getElementById("demo4").innerHTML =
+            typeof undefined + "<br>" +
+            typeof null + "<br>" +
+            (null === undefined) + "<br>" +
+            (null == undefined) + "<br>" +
+            (null !== undefined);
+    </script>
+</body>
+
+</html>

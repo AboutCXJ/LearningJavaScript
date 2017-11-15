@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 类型转换</title>
+</head>
+
+<body>
+    <script>
+        //typeof 操作符
+        console.log(typeof("John"));
+        console.log(typeof(3.14));
+        console.log(typeof(false));
+        console.log(typeof([1, 2, 3]));
+        console.log(typeof({
+            name: "John",
+            age: 34
+        }));
+        console.log(typeof(new Date()));
+        console.log(typeof(function() {}));
+        console.log(typeof(myCar));
+        console.log(typeof(null));
+
+
+        //constructor 属性
+        console.log("John".constructor);
+        console.log(3.14.constructor);
+        console.log(false.constructor);
+        console.log([1, 2, 3].constructor);
+        console.log({
+            name: "John",
+            age: 34
+        }.constructor);
+        console.log(new Date().constructor);
+        console.log(function() {}.constructor);
+
+
+
+        function isArray(myArray) {
+            return myArray.constructor.toString().indexOf("Array") > -1;
+        }
+
+        console.log(isArray([1, 2, 3]));
+
+    </script>
+</body>
+
+</html>

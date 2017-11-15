@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 函数参数</title>
+</head>
+
+<body>
+    <script>
+        //默认参数
+        function func1(x, y) {
+            y = y || 0;
+            x = x || 0;
+            return x * y;
+        }
+        console.log(func1(2, 3));
+
+
+        //Arguments 对象
+        function findMax() {
+            var max = arguments[0];
+
+            if (arguments.length < 2) {
+                return max;
+            }
+
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+
+        console.log(findMax(1, 123, 500, 115, 44, 88));
+
+
+
+        function sumAll() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        console.log(sumAll(1, 123, 500, 115, 44, 88));
+
+    </script>
+</body>
+
+</html>
